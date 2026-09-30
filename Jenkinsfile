@@ -6,7 +6,7 @@ pipeline{
         stage("Code Clone"){
             steps{
                script{
-                   clone("https://github.com/LondheShubham153/two-tier-flask-app.git", "master")
+                   clone("https://github.com/javedops/two-tier-flask-app.git", "main")
                }
             }
         }
@@ -32,7 +32,7 @@ pipeline{
         stage("Push to Docker Hub"){
             steps{
                 script{
-                    docker_push("dockerHubCreds","two-tier-flask-app")
+                    docker_push("javedops","two-tier-flask-app")
                 }  
             }
         }
